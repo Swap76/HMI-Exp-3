@@ -31,20 +31,20 @@
 
 		<div class = "phpquestions">
 		<p>
-		<ol>
-		<li>Name</li>
-		<label><input type="text" name="name"></label>
-
-		<li>Email</li>
-		<label><input type="text" name="email"></label>
-
-		<li>Phone Number</li>
-		<label><input type="text" name="phone"></label>
-
-		<li>Comments</li>
+		
+		Name<br/>
+		<label><input type="text" name="name" size="35"></label>
+		<br/>
+		Email<br/>
+		<label><input type="text" name="email" size="35"></label>
+		<br/>
+		Phone Number<br/>
+		<label><input type="text" name="phone" size="35"></label>
+		<br/>
+		Comments<br/>
 		<label><textarea name="message" rows="6" cols="25"></textarea></label>
-
-		</ol>
+		<br/>
+		
 		<input type="hidden" name="stage" value="process">
 		<input type="submit" name="sumbit" value="Submit">
 		<input type="reset" value="Clear">
