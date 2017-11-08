@@ -1,0 +1,246 @@
+body
+{
+	background-color: #f9f9f9;
+}
+
+img
+{
+	width : 100%;
+}
+
+h1,h2,h3,h4,h5
+{
+	font-family: serif, sans-serif, Helvetica, Verdana, Arial;
+	font-style: normal;
+}
+
+h3
+{
+	padding: 0 0 1% 0;
+	color: #001833;
+	font-weight: 800;
+	text-align: center;
+}
+
+header
+{
+	background-color: #ffffff;
+	background-position: center top;
+}
+
+a:link, a:visited 
+{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+.intro
+{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 3% 0;
+}
+
+.intro h1
+{
+	font-size: 2.0em;
+	text-align: center;
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	line-height: 0.4em;
+}
+
+.intro h2
+{
+	font-size: 1.4em;
+	text-align: center;
+	color: #000000;
+	text-transform: capitalize;
+	letter-spacing: 0.09em;
+	font-weight: 300;
+}
+
+.intro h4
+{
+	font-size: 1.4em;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: 300;
+}
+
+.wrapper
+{
+	max-width: 950px;
+	margin: auto;
+	font-family: serif, sans-serif, Helvetica, Verdana, Arial;
+}
+
+.about h2
+{
+	text-transform: uppercase;
+	font-size: 1.7em;
+	text-align: center; 
+
+}
+
+.about p
+{
+	font-family: serif, sans-serif, Helvetica, Verdana, Arial;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.8;
+	color: #616569;
+	letter-spacing: 0.03em;
+	margin: 10px auto;
+	font-size: 1.2em;
+	text-align: center; 
+
+}
+
+.allproduct
+{
+	padding: 2% 0 2% 0;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.product
+{
+	height: 400px;
+	padding: 2% 7% 2% 7%;
+	margin: auto;
+}
+
+.product h2
+{
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.product h3
+{
+	text-align: center;
+	padding: 4% 0;
+}
+
+.text-box
+{
+	float: left;
+	text-align: center;
+	width: 480px;
+	background-color: #ffffff;
+	height: 100%;
+}
+
+.text-box-content
+{
+	padding: 4% 8%;
+}
+
+.text-box-content p
+{
+	line-height: 1.5;
+	color: #616569;
+	letter-spacing: .03em;
+	font-size: 1em;
+}
+
+.image-area
+{
+	width: 480px;
+	height: 300px;
+	overflow: hidden;
+	margin: auto;
+}
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+
+.contact
+{
+	width: 100%;
+	padding: 3% 0 3% 0;
+	margin-top: 5%;
+	margin-bottom: 3%;
+}
+
+.contact-content p
+{
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: serif, sans-serif, Helvetica, Verdana, Arial;
+	line-height: 1.8;
+	color: #616569;
+	letter-spacing: 0.02em;
+	font-size: 1.2em;
+}
+
+.contact-content h2
+{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.4em;
+	color: #000000;
+	letter-spacing: 0.04em;
+}
+
+.image-divider
+{
+	padding: 15% 0;
+	background: url(boudhanath.jpg);
+	background-position: center top;
+}
+
+.phpquestions
+{
+	text-align: center;
+}
+
+footer
+{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
