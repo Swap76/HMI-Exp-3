@@ -13,7 +13,7 @@
 		<div class= "intro">
 			<h1> Tibetan Handicrafts and Bead Store </h1>
 			<h3> Every decade needs its own manual of handicraft.</h3>
-			<h3><a href="http://sand.truman.edu/~ns7442/project/index.html">Home Page</a></h3>
+			<h3><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Home Page</a></h3>
 		</div>
 	</header>
 	
