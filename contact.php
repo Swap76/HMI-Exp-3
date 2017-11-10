@@ -28,10 +28,18 @@
 		echo <<< END
 
 		<form action = "$_SERVER[PHP_SELF]" method = "post" id = "contact">
+		<div class = "wrapper">
+		<div class = "about">
 
+		<h2> Contact Us </h2>
+		<p>
+		Do you like to send us a message regarding what you feel about our service, have any comments or feedback, any suggestion for adding new content that may be useful for you and others, any suggestion to improve the quality of existing content, did you find any errors or bugs and want to inform us so that we can correct it, then please send us a mail. We would love to read all of your message. We will make sure that all the important emails will get responded. 
+		</p>
+		</div>
+		
 		<div class = "phpquestions">
 		<p>
-		
+				
 		Name<br/>
 		<label><input type="text" name="name" size="35"></label>
 		<br/>
@@ -50,6 +58,7 @@
 		<input type="reset" value="Clear">
 
 		</p>
+		</div>
 		</div>
 		</form>
 END;
