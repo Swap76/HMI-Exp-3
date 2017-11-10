@@ -46,7 +46,7 @@
 		Email<br/>
 		<label><input type="text" name="email" size="35"></label>
 		<br/>
-		Phone Number<br/>
+		Subject<br/>
 		<label><input type="text" name="phone" size="35"></label>
 		<br/>
 		Comments<br/>

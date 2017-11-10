@@ -161,6 +161,7 @@ a:hover, a:active {
 	height: 300px;
 	overflow: hidden;
 	margin: auto;
+	position: fixed;
 }
 .left
 {
@@ -177,6 +178,7 @@ a:hover, a:active {
 	width: 100%;
 	height: 100%;
 	padding: 3% 0 3% 0;
+
 }
 
 .contact-content p
@@ -292,19 +294,31 @@ footer
     /* ... */
 }
 
-input[type=text] {
+input[type="text"] 
+{
     padding:5px; 
     border:2px solid #ccc; 
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus 
+{
     border-color:#333;
 }
 
-input[type=submit] {
+input[type="submit"] 
+{
     padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+input[type="reset"]
+{
+	padding:5px 15px; 
     background:#ccc; 
     border:0 none;
     cursor:pointer;
