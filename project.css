@@ -278,6 +278,7 @@ footer
   background-color: #717171;
 }
 
+/* Citation - www.w3schools.com */
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
@@ -286,7 +287,6 @@ footer
   animation-duration: 2s;
 }
 
-/* Citation - www.w3schools.com */
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
