@@ -59,7 +59,7 @@ ul {
 }
 
 li {
-    float: left;
+    float: none;
 }
 
 li a {
