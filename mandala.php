@@ -45,13 +45,16 @@
         					 <form action="$_SERVER[PHP_SELF]" method="post">
 
         					<input type="hidden" name="Time" value="$time">
-        					</br>
-					        Size:
+        					
+        					Size:
 					        <select name="size">
-    							<option value="small">Small - $2.00</option>
-    							<option value="meduim">Medium - $4.00</option>
-    							<option value="large">Large - $5.00</option>
+    							<option value="small">Small</option>
+    							<option value="meduim">Medium</option>
+    							<option value="large">Large</option>
 							 </select>
+
+						 <br>
+						<strong>Price:</strong> $9.99
 					<h4><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Add to Cart</a>
 					</h4>
 					</p>
@@ -67,13 +70,9 @@
 				<div class="text-box-content">
 					<h3>The Mantra </h3>
 						<p>
-							Beautiful Tibetan banner that features the 8 Auspicious Symbols along with the mantra of compassion, Om Mani Padme Hum.  This mantra invokes the powerful benevolent attention and blessings of Chenrezig, the embodiment of compassion.</br>
-							Size:
-					        <select name="size">
-    							<option value="small">Small - $2.00</option>
-    							<option value="meduim">Medium - $4.00</option>
-    							<option value="large">Large - $5.00</option>
-							 </select> 
+							Beautiful Tibetan banner that features the 8 Auspicious Symbols along with the mantra of compassion, Om Mani Padme Hum.  This mantra invokes the powerful benevolent attention and blessings of Chenrezig, the embodiment of compassion.
+							<br>
+							<strong>Price:</strong> $4.99  
 						
 						<h4><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Add to Cart</a>
 					</h4>
