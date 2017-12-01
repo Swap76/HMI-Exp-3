@@ -56,7 +56,7 @@
 		<input type="submit" name="sumbit" value="Submit">
 		<input type="reset" value="Clear">
 
-		Location: Shop #53, Boudhnath Stupa, Kathmandu, Nepal
+		<p><strong>Location:</strong> Shop #53, Boudhnath Stupa, Kathmandu, Nepal</p>
 		</p>
 		</div>
 		</div>
