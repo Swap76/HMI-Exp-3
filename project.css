@@ -50,20 +50,37 @@ a:active {
     transform: translateY(4px);
 }
 
-ul {
+.text-box-content-return li
+{
+	line-height: 1.5;
+	color: #616569;
+	letter-spacing: .03em;
+	font-size: 1em;
+}
+
+.text-box-content-return ul
+{
+	line-height: 1.5;
+	color: #616569;
+	letter-spacing: .03em;
+	font-size: 1em;
+}
+
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+
+.menu li {
 	float : left;
     margin: auto;
     width: 25%;
 }
 
-li a {
+.menu li a {
     display: inline-block;
     color: white;
     text-align: center;
@@ -71,7 +88,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.menu li a:hover {
     background-color: #111;
 }
 
@@ -137,7 +154,6 @@ li a:hover {
 	margin: 10px auto;
 	font-size: 1.2em;
 	text-align: center; 
-
 }
 
 .allproduct
@@ -189,14 +205,15 @@ li a:hover {
 
 .text-box-return
 {
-	text-align: center;
+	float:left;
+	text-align: left;
 	background-color: #ffffff;
 	height: 100%;
 }
 
 .text-box-content-return
 {
-	padding: 2% 2% 2% 6%;
+	padding: 2% 10% 2% 10%;
 }
 
 .text-box-content-return p
