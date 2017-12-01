@@ -187,6 +187,26 @@ li a:hover {
 	font-size: 1em;
 }
 
+.text-box-return
+{
+	text-align: center;
+	background-color: #ffffff;
+	height: 100%;
+}
+
+.text-box-content-return
+{
+	padding: 2% 2% 2% 6%;
+}
+
+.text-box-content-return p
+{
+	line-height: 1.5;
+	color: #616569;
+	letter-spacing: .03em;
+	font-size: 1em;
+}
+
 .image-area
 {
 	width: 480px;
