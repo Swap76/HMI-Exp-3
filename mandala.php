@@ -45,18 +45,60 @@
         					 <form action="$_SERVER[PHP_SELF]" method="post">
 
         					<input type="hidden" name="Time" value="$time">
-        					
-        					Size:
+        					</br>
+					        Size:
 					        <select name="size">
-    							<option value="small">Small</option>
-    							<option value="meduim">Medium</option>
-    							<option value="large">Large</option>
+    							<option value="small">Small - $2.00</option>
+    							<option value="meduim">Medium - $4.00</option>
+    							<option value="large">Large - $5.00</option>
 							 </select>
+					
+							<form action="index.html">
+           				 		<input type="submit" value="Add to Cart"/>
+        					</form>
 
-						 <br>
-						<strong>Price:</strong> $9.99
-					<h4><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Add to Cart</a>
-					</h4>
+END;
+					}
+
+					// A function to process the HTML form. 
+					function process_form() 
+					{
+					    $owner = $_POST['owner'];
+					    $location = $_POST['location'];
+					    $year = $_POST['year'];
+
+					    try 
+					    {
+					        $conn = new PDO("mysql:host=mysql.truman.edu;dbname=ns7442CS315", "ns7442", "chohghot");
+					        // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+					        // set the PDO error mode to exception
+					        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+					        // prepare sql and bind parameters
+					        $stmt = $conn->prepare("INSERT INTO rent (SN, owner, location, year)
+					                                VALUES (NULL, :owner, :location, :year)");
+					        $stmt->bindParam(':owner', $owner);
+					        $stmt->bindParam(':location', $location);
+					        $stmt->bindParam(':year', $year);
+
+					        $stmt->execute();
+					    }
+					    catch(PDOException $e)
+					    {
+					        echo "Error: " . $e->getMessage();
+					    }
+
+					// end the DB connection.
+					$conn = null;
+					}
+
+					if (isset($_POST['stage']) && ('process' == $_POST['stage'])) {
+					    process_form();
+					} else {
+					    print_form();
+					}
+
+					?>
 					</p>
 				</div>
 			</div>	
@@ -70,9 +112,13 @@
 				<div class="text-box-content">
 					<h3>The Mantra </h3>
 						<p>
-							Beautiful Tibetan banner that features the 8 Auspicious Symbols along with the mantra of compassion, Om Mani Padme Hum.  This mantra invokes the powerful benevolent attention and blessings of Chenrezig, the embodiment of compassion.
-							<br>
-							<strong>Price:</strong> $4.99  
+							Beautiful Tibetan banner that features the 8 Auspicious Symbols along with the mantra of compassion, Om Mani Padme Hum.  This mantra invokes the powerful benevolent attention and blessings of Chenrezig, the embodiment of compassion.</br>
+							Size:
+					        <select name="size">
+    							<option value="small">Small - $2.00</option>
+    							<option value="meduim">Medium - $4.00</option>
+    							<option value="large">Large - $5.00</option>
+							 </select> 
 						
 						<h4><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Add to Cart</a>
 					</h4>
