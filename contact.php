@@ -13,9 +13,17 @@
 		<div class= "intro">
 			<h1> Tibetan Handicrafts and Bead Store </h1>
 			<h3> Every decade needs its own manual of handicraft.</h3>
-			<h3><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Home Page</a></h3>
 		</div>
 	</header>
+
+	<div class="menu">
+	<ul>
+  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Home Page</a></h3></li>
+  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/prime.php">Become our Prime Member</a></h3></li>
+ 		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/contact.php">Contact Us</a></h3></li>
+ 		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/return.html">Return Policy</a></h3></li>
+	</ul>
+    </div>
 	
 	<?php
 	/* In this milestone, I have created a very basic contact form to get us started. 
