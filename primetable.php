@@ -20,6 +20,8 @@
 	<ul>
   		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Home Page</a></h3></li>
   		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/prime.php">Become our Prime Member</a></h3></li>
+  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/primetable.php">Our Prime Members</a></h3></li>
+
  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/contact.php">Contact Us</a></h3></li>
  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/return.html">Return Policy</a></h3></li>
 	</ul>
@@ -63,7 +65,7 @@ END;
           // Also, mysql_fetch_row returns a regular positional array
           // instead of an associative array.
 
-      print "<tr><td>{$row['name']}</td><td>{$row['phone']}</td><td>{$row['email']}</td><td>{$row['primemember']}</td><td>{$row['country']}</td><tr>";
+      print "<tr><td>{$row['name']}</td><td>{$row['phone']}</td><td>{$row['email']}</td><td>{$row['primemember']}</td><td>{$row['country']}</td></tr>";
     }
     print "</table>";
 }

@@ -20,6 +20,8 @@
 	<ul>
   		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Home Page</a></h3></li>
   		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/prime.php">Become our Prime Member</a></h3></li>
+  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/primetable.php">Our Prime Members</a></h3></li>
+
  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/contact.php">Contact Us</a></h3></li>
  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/return.html">Return Policy</a></h3></li>
 	</ul>
@@ -110,15 +112,15 @@ END;
 
 	if (isset($_POST['stage']) && ('process' == $_POST['stage'])) 
 	{
-	//Calls the function to post the contact. 
+		//Calls the function to post the contact. 
 		process_form();
 	} 
 	else 
 	{
-	//Sends the email and prints the thank you message.
+		//Sends the email and prints the thank you message.
 		print_form();
 	}
-	?>
+?>
 
 	
 	<div class ="image-divider"></div>

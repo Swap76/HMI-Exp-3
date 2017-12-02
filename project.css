@@ -77,14 +77,14 @@ a:active {
 .menu li {
 	float : left;
     margin: auto;
-    width: 25%;
+    width: 20%;
 }
 
 .menu li a {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
 }
 

@@ -20,6 +20,8 @@
 	<ul>
   		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/index.html">Home Page</a></h3></li>
   		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/prime.php">Become our Prime Member</a></h3></li>
+  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/primetable.php">Our Prime Members</a></h3></li>
+
  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/contact.php">Contact Us</a></h3></li>
  		<li><h3><a href="http://sand.truman.edu/~ns7442/project-website/return.html">Return Policy</a></h3></li>
 	</ul>
@@ -358,65 +360,54 @@ END;
 	    $primemember = $_POST['primemember'];
 	    $country = $_POST['country'];
 
-	    if($name !="" && $phone != "" && $phone !="" && $c_number!="" && $address != "") 
+	    if($name === "" || $email === "" || $phone ==="" || $primemember ==="" || $country === "") 
         { 
-            if ($dbh->query($sql)) 
-            { 
-                echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>"; 
-            } 
-            else 
-            { 
-                echo "<script type= 'text/javascript'>alert('Data not successfully Inserted. Please make sure 
-                  that all fields have been entered.');</script>"; 
-            } 
+           echo "<script type= 'text/javascript'>alert('Please make sure that all fields have been entered.');</script>"; 
         } 
         else 
         { 
-            echo "<script type= 'text/javascript'>alert('Please make sure that all fields have been entered.');</script>"; 
+            try 
+		    {
+		        $conn = new PDO("mysql:host=mysql.truman.edu;dbname=ns7442CS315", "ns7442", "chohghot");
+		        // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		        // set the PDO error mode to exception
+		        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		        // prepare sql and bind parameters
+		        $stmt = $conn->prepare("INSERT INTO member (name, phone, email, primemember, country)
+		                                VALUES (:name, :phone, :email, :primemember, :country)");
+		        $stmt->bindParam(':name', $name);
+		        $stmt->bindParam(':phone', $phone);
+		        $stmt->bindParam(':email', $email);
+		       	$stmt->bindParam(':primemember', $primemember);
+		       	$stmt->bindParam(':country', $country);
+		        $stmt->execute();
+		    }
+		    catch(PDOException $e)
+		    {
+		        echo "Error: " . $e->getMessage();
+		    }
         } 
-
-	    try 
-	    {
-	        $conn = new PDO("mysql:host=mysql.truman.edu;dbname=ns7442CS315", "ns7442", "chohghot");
-	        // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-	        // set the PDO error mode to exception
-	        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-	        // prepare sql and bind parameters
-	        $stmt = $conn->prepare("INSERT INTO member (name, phone, email, primemember, country)
-	                                VALUES (:name, :phone, :email, :primemember, :country)");
-	        $stmt->bindParam(':name', $name);
-	        $stmt->bindParam(':phone', $phone);
-	        $stmt->bindParam(':email', $email);
-	       	$stmt->bindParam(':primemember', $primemember);
-	       	$stmt->bindParam(':country', $country);
-	        $stmt->execute();
-	    }
-	    catch(PDOException $e)
-	    {
-	        echo "Error: " . $e->getMessage();
-	    }
-
-// end the DB connection.
-$conn = null;
-    
-print "<br />Thank you for entering your information.";
-print "<br />Please <a href=\"primetable.php\">click here</a> to display all the information.";
-
+        			// end the DB connection.
+			$conn = null;
+			    
+			print "<br />Thank you for entering your information.";
+			print "<br />Please <a href=\"primetable.php\">click here</a> to display all the information.";
 }
 	/* All the information that will be sent from our membership form will be stored in our database. 
 
 	After filling out the form and clicking the "Submit" button, visitors will see a message confirming the form was processed. Submitting the form sets a hidden parameter called action that prevents the form from being displayed again, so that we won't bother visitors with forms they've already filled out. The PHP script also verifies that all the HTML fields are filled in properly. */
 
-if (isset($_POST['stage']) && ('process' == $_POST['stage'])) 
-{
-    process_form();
-} 
-else 
-{
-    print_form();
-}
-
+	if (isset($_POST['stage']) && ('process' == $_POST['stage'])) 
+	{
+		//Calls the function to post the contact. 
+		process_form();
+	} 
+	else 
+	{
+		//Sends the email and prints the thank you message.
+		print_form();
+	}
 ?>	
 	<div class ="image-divider"></div>
 
