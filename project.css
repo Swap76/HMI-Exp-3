@@ -77,7 +77,7 @@ a:active {
 .menu li {
 	float : left;
     margin: auto;
-    width: 33%;
+    width: 25%;
 }
 
 .menu li a {
@@ -428,6 +428,17 @@ input[type=reset]:active {
     transform: translateY(4px);
 }
 
+table
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td
+{
+	text-align: left;
+	padding: 8px;
+}
 
 
 
