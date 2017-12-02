@@ -50,7 +50,7 @@
 			<li>Deals and Discounts up to 50% on the local Tibetan market, Kathmandu</li>
 		</ul>
 		</div>
-		</p>
+	
 
 		</div>
 		<div class = "phpquestions">
@@ -358,6 +358,23 @@ END;
 	    $primemember = $_POST['primemember'];
 	    $country = $_POST['country'];
 
+	    if($name !="" && $phone != "" && $phone !="" && $c_number!="" && $address != "") 
+        { 
+            if ($dbh->query($sql)) 
+            { 
+                echo "<script type= 'text/javascript'>alert('New Record Inserted Successfully');</script>"; 
+            } 
+            else 
+            { 
+                echo "<script type= 'text/javascript'>alert('Data not successfully Inserted. Please make sure 
+                  that all fields have been entered.');</script>"; 
+            } 
+        } 
+        else 
+        { 
+            echo "<script type= 'text/javascript'>alert('Please make sure that all fields have been entered.');</script>"; 
+        } 
+
 	    try 
 	    {
 	        $conn = new PDO("mysql:host=mysql.truman.edu;dbname=ns7442CS315", "ns7442", "chohghot");
@@ -375,10 +392,10 @@ END;
 	       	$stmt->bindParam(':country', $country);
 	        $stmt->execute();
 	    }
-    catch(PDOException $e)
-    {
-        echo "Error: " . $e->getMessage();
-    }
+	    catch(PDOException $e)
+	    {
+	        echo "Error: " . $e->getMessage();
+	    }
 
 // end the DB connection.
 $conn = null;
@@ -391,9 +408,12 @@ print "<br />Please <a href=\"primetable.php\">click here</a> to display all the
 
 	After filling out the form and clicking the "Submit" button, visitors will see a message confirming the form was processed. Submitting the form sets a hidden parameter called action that prevents the form from being displayed again, so that we won't bother visitors with forms they've already filled out. The PHP script also verifies that all the HTML fields are filled in properly. */
 
-if (isset($_POST['stage']) && ('process' == $_POST['stage'])) {
+if (isset($_POST['stage']) && ('process' == $_POST['stage'])) 
+{
     process_form();
-} else {
+} 
+else 
+{
     print_form();
 }
 
