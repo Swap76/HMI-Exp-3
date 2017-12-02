@@ -65,7 +65,6 @@
 		<input type="reset" value="Clear">
 
 		<p><strong>Location:</strong> Shop #53, Boudhnath Stupa, Kathmandu, Nepal</p>
-		</p>
 		</div>
 		</div>
 		</form>
@@ -126,8 +125,7 @@ END;
 
 	<footer>
 	<div class="footer-content">
-	<p class="credit"> &copy; Copyright 2017 Tibetan Handicrafts and Bead Store
-	</p>
+	<p class="credit"> &copy; Copyright 2017 Tibetan Handicrafts and Bead Store</p>
 	</div>
 	</footer>
 
